@@ -4,11 +4,11 @@ import css from "./HomePage.module.css";
 export default function HomePage() {
   return (
     <div className={css.container}>
-      <h1>Welcome to Our Contact List Manager!</h1>
+      <h1>Welcome!</h1>
       <p>
         To access and manage your contact list, please register or log in to
-        your account. Registration is quick and easy, and it ensures your data
-        remains secure. Already have an account? Click{" "}
+        your account. Registration is quick and easy. Already have an account?
+        Click{" "}
         <Link to="/login" className={css.homePageLink}>
           log in
         </Link>{" "}
@@ -16,7 +16,7 @@ export default function HomePage() {
         <Link to="/register" className={css.homePageLink}>
           register
         </Link>{" "}
-        to join us today! Your personalized and secure contact list awaits!
+        to join us!
       </p>
     </div>
   );
