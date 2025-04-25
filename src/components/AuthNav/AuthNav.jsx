@@ -1,16 +1,25 @@
 import { NavLink } from "react-router-dom";
-import { Link } from "react-router-dom";
 import css from "./AuthNav.module.css";
 
 export default function AuthNav() {
   return (
     <div className={css.nav}>
-      <Link to="/login" className={css.authLink}>
+      <NavLink
+        to="/login"
+        className={({ isActive }) =>
+          isActive ? `${css.authLink} ${css.active}` : css.authLink
+        }
+      >
         Log in
-      </Link>
-      <Link to="/register" className={css.authLink}>
+      </NavLink>
+      <NavLink
+        to="/register"
+        className={({ isActive }) =>
+          isActive ? `${css.authLink} ${css.active}` : css.authLink
+        }
+      >
         Register
-      </Link>
+      </NavLink>
     </div>
   );
 }
